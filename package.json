@@ -1,0 +1,22 @@
+{
+  "name": "@local/dsh-plugin-voice-input",
+  "version": "0.1.0",
+  "description": "Voice input plugin for DeepSeek Harness web: a mic button in the composer that recognizes speech (Web Speech API) and fills the draft, with optional auto-send.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ],
+      "platform": "web"
+    }
+  },
+  "license": "MIT"
+}
